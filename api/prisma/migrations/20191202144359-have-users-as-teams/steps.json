@@ -1,0 +1,17 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "stepType": "UpdateField",
+      "model": "Dream",
+      "field": "description",
+      "arity": "optional"
+    },
+    {
+      "stepType": "UpdateField",
+      "model": "Dream",
+      "field": "team",
+      "type": "User"
+    }
+  ]
+}

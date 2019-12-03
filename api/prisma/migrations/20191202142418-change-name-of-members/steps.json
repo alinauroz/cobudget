@@ -1,0 +1,17 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "stepType": "CreateField",
+      "model": "Event",
+      "field": "memberships",
+      "type": "Membership",
+      "arity": "list"
+    },
+    {
+      "stepType": "DeleteField",
+      "model": "Event",
+      "field": "members"
+    }
+  ]
+}

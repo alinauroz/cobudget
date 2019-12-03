@@ -1,0 +1,459 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "stepType": "CreateModel",
+      "model": "User"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "User",
+      "field": "id",
+      "type": "String",
+      "arity": "required"
+    },
+    {
+      "stepType": "CreateDirective",
+      "model": "User",
+      "field": "id",
+      "directive": "default"
+    },
+    {
+      "stepType": "CreateDirectiveArgument",
+      "model": "User",
+      "field": "id",
+      "directive": "default",
+      "argument": "",
+      "value": "cuid()"
+    },
+    {
+      "stepType": "CreateDirective",
+      "model": "User",
+      "field": "id",
+      "directive": "id"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "User",
+      "field": "email",
+      "type": "String",
+      "arity": "required"
+    },
+    {
+      "stepType": "CreateDirective",
+      "model": "User",
+      "field": "email",
+      "directive": "unique"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "User",
+      "field": "memberships",
+      "type": "Membership",
+      "arity": "list"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "User",
+      "field": "name",
+      "type": "String",
+      "arity": "optional"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "User",
+      "field": "avatar",
+      "type": "String",
+      "arity": "optional"
+    },
+    {
+      "stepType": "CreateModel",
+      "model": "Membership"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Membership",
+      "field": "id",
+      "type": "String",
+      "arity": "required"
+    },
+    {
+      "stepType": "CreateDirective",
+      "model": "Membership",
+      "field": "id",
+      "directive": "default"
+    },
+    {
+      "stepType": "CreateDirectiveArgument",
+      "model": "Membership",
+      "field": "id",
+      "directive": "default",
+      "argument": "",
+      "value": "cuid()"
+    },
+    {
+      "stepType": "CreateDirective",
+      "model": "Membership",
+      "field": "id",
+      "directive": "id"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Membership",
+      "field": "user",
+      "type": "User",
+      "arity": "required"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Membership",
+      "field": "event",
+      "type": "Event",
+      "arity": "required"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Membership",
+      "field": "isActive",
+      "type": "Boolean",
+      "arity": "required"
+    },
+    {
+      "stepType": "CreateDirective",
+      "model": "Membership",
+      "field": "isActive",
+      "directive": "default"
+    },
+    {
+      "stepType": "CreateDirectiveArgument",
+      "model": "Membership",
+      "field": "isActive",
+      "directive": "default",
+      "argument": "",
+      "value": "false"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Membership",
+      "field": "isApproved",
+      "type": "Boolean",
+      "arity": "required"
+    },
+    {
+      "stepType": "CreateDirective",
+      "model": "Membership",
+      "field": "isApproved",
+      "directive": "default"
+    },
+    {
+      "stepType": "CreateDirectiveArgument",
+      "model": "Membership",
+      "field": "isApproved",
+      "directive": "default",
+      "argument": "",
+      "value": "false"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Membership",
+      "field": "isAdmin",
+      "type": "Boolean",
+      "arity": "required"
+    },
+    {
+      "stepType": "CreateDirective",
+      "model": "Membership",
+      "field": "isAdmin",
+      "directive": "default"
+    },
+    {
+      "stepType": "CreateDirectiveArgument",
+      "model": "Membership",
+      "field": "isAdmin",
+      "directive": "default",
+      "argument": "",
+      "value": "false"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Membership",
+      "field": "createdAt",
+      "type": "DateTime",
+      "arity": "required"
+    },
+    {
+      "stepType": "CreateDirective",
+      "model": "Membership",
+      "field": "createdAt",
+      "directive": "default"
+    },
+    {
+      "stepType": "CreateDirectiveArgument",
+      "model": "Membership",
+      "field": "createdAt",
+      "directive": "default",
+      "argument": "",
+      "value": "now()"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Membership",
+      "field": "updatedAt",
+      "type": "DateTime",
+      "arity": "required"
+    },
+    {
+      "stepType": "CreateDirective",
+      "model": "Membership",
+      "field": "updatedAt",
+      "directive": "updatedAt"
+    },
+    {
+      "stepType": "CreateModel",
+      "model": "Event"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Event",
+      "field": "id",
+      "type": "String",
+      "arity": "required"
+    },
+    {
+      "stepType": "CreateDirective",
+      "model": "Event",
+      "field": "id",
+      "directive": "default"
+    },
+    {
+      "stepType": "CreateDirectiveArgument",
+      "model": "Event",
+      "field": "id",
+      "directive": "default",
+      "argument": "",
+      "value": "cuid()"
+    },
+    {
+      "stepType": "CreateDirective",
+      "model": "Event",
+      "field": "id",
+      "directive": "id"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Event",
+      "field": "slug",
+      "type": "String",
+      "arity": "required"
+    },
+    {
+      "stepType": "CreateDirective",
+      "model": "Event",
+      "field": "slug",
+      "directive": "unique"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Event",
+      "field": "title",
+      "type": "String",
+      "arity": "required"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Event",
+      "field": "description",
+      "type": "String",
+      "arity": "optional"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Event",
+      "field": "logo",
+      "type": "String",
+      "arity": "optional"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Event",
+      "field": "members",
+      "type": "Membership",
+      "arity": "list"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Event",
+      "field": "dreams",
+      "type": "Dream",
+      "arity": "list"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Event",
+      "field": "createdAt",
+      "type": "DateTime",
+      "arity": "required"
+    },
+    {
+      "stepType": "CreateDirective",
+      "model": "Event",
+      "field": "createdAt",
+      "directive": "default"
+    },
+    {
+      "stepType": "CreateDirectiveArgument",
+      "model": "Event",
+      "field": "createdAt",
+      "directive": "default",
+      "argument": "",
+      "value": "now()"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Event",
+      "field": "updatedAt",
+      "type": "DateTime",
+      "arity": "required"
+    },
+    {
+      "stepType": "CreateDirective",
+      "model": "Event",
+      "field": "updatedAt",
+      "directive": "updatedAt"
+    },
+    {
+      "stepType": "CreateModel",
+      "model": "Dream"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Dream",
+      "field": "id",
+      "type": "String",
+      "arity": "required"
+    },
+    {
+      "stepType": "CreateDirective",
+      "model": "Dream",
+      "field": "id",
+      "directive": "default"
+    },
+    {
+      "stepType": "CreateDirectiveArgument",
+      "model": "Dream",
+      "field": "id",
+      "directive": "default",
+      "argument": "",
+      "value": "cuid()"
+    },
+    {
+      "stepType": "CreateDirective",
+      "model": "Dream",
+      "field": "id",
+      "directive": "id"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Dream",
+      "field": "slug",
+      "type": "String",
+      "arity": "required"
+    },
+    {
+      "stepType": "CreateDirective",
+      "model": "Dream",
+      "field": "slug",
+      "directive": "unique"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Dream",
+      "field": "title",
+      "type": "String",
+      "arity": "required"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Dream",
+      "field": "description",
+      "type": "String",
+      "arity": "required"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Dream",
+      "field": "event",
+      "type": "Event",
+      "arity": "required"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Dream",
+      "field": "images",
+      "type": "String",
+      "arity": "list"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Dream",
+      "field": "team",
+      "type": "Membership",
+      "arity": "list"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Dream",
+      "field": "minFunding",
+      "type": "Int",
+      "arity": "optional"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Dream",
+      "field": "maxFunding",
+      "type": "Int",
+      "arity": "optional"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Dream",
+      "field": "budgetDescription",
+      "type": "String",
+      "arity": "optional"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Dream",
+      "field": "createdAt",
+      "type": "DateTime",
+      "arity": "required"
+    },
+    {
+      "stepType": "CreateDirective",
+      "model": "Dream",
+      "field": "createdAt",
+      "directive": "default"
+    },
+    {
+      "stepType": "CreateDirectiveArgument",
+      "model": "Dream",
+      "field": "createdAt",
+      "directive": "default",
+      "argument": "",
+      "value": "now()"
+    },
+    {
+      "stepType": "CreateField",
+      "model": "Dream",
+      "field": "updatedAt",
+      "type": "DateTime",
+      "arity": "required"
+    },
+    {
+      "stepType": "CreateDirective",
+      "model": "Dream",
+      "field": "updatedAt",
+      "directive": "updatedAt"
+    }
+  ]
+}
