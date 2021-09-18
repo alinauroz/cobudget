@@ -1,8 +1,8 @@
-//import crypto from "crypto";
+import crypto from "crypto";
 
-// function randomString() {
-//   return crypto.randomBytes(10).toString("hex");
-// }
+function randomString() {
+  return crypto.randomBytes(10).toString("hex");
+}
 
 // TODO: a lot of this is copy pasted from realities, we should use it
 // for inspiration and then remove it
@@ -11,7 +11,7 @@ describe("Test basic functionality", () => {
   it("Onboards successfully", () => {
     const userEmail = "realitiestester@example.com";
     const userPass = "password123";
-    // const orgName = "Test org";
+    const orgName = randomString();
     // const needName = randomString();
     // const respName = randomString();
 
@@ -32,7 +32,11 @@ describe("Test basic functionality", () => {
       .submit()
       .root()
       // waiting to get back to the homepage
-      .contains("Digital tools for participant-driven culture");
+      .contains("Digital tools for participant-driven culture")
+
+      .root()
+      .contains("Create a Community")
+      .click();
 
     // .root()
     // .contains(orgName)

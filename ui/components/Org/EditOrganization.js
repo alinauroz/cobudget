@@ -77,7 +77,7 @@ const EditOrganization = ({ organization, currentUser }) => {
       if (isNew) {
         const dreamsUrl = process.env.IS_PROD
           ? `https://${variables.subdomain}.${process.env.DEPLOY_URL}`
-          : `http://${variables.subdomain}.localhost:3000`;
+          : `http://${variables.subdomain}.${process.env.DEPLOY_URL}`;
 
         const realitiesUrl = `http${process.env.IS_PROD ? "s" : ""}://${
           process.env.REALITIES_DEPLOY_URL
