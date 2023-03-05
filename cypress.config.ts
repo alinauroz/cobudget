@@ -10,11 +10,11 @@ export default defineConfig({
     setupNodeEvents(on, config) {
       return require("./cypress/plugins/index.js")(on, config);
     },
-    baseUrl: "http://localhost:3001/",
+    baseUrl: "http://localhost:3000/",
     env: {
       termsURL: process.env.TERMS_URL,
       email: `user${Date.now()}@test.com`, // This email will be used to register/login a user for testing
-      magicLinkSecret: process.env.MAGIC_LINK_SECRET, // use magic link secret from .env.local
+      magicLinkSecret: process.env.MAGIC_LINK_SECRET || "potatopotatopotato", // use magic link secret from .env.local
       roundSlug: `round${Date.now()}`, // default round slug
     },
   },
